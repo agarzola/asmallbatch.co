@@ -14,7 +14,7 @@ Accessibility and user experience are paramount to the success of digital produc
 ## We do our best work in collaboration.
 Design and development are collaborative endeavors. Our practice is firmly rooted in engaging our partners and clients throughout the problem-solving process, from discovery through to build and deployment. Likewise, we are at our best when we are allowed to contribute to a project early and often.
 
-## We’re not vendors; we’re your partners.
+## We’re not another vendor; we’re your partners.
 We bring experience and expertise to the table. We’ve consulted with in-house design teams to improve their interface design; conducted show-and-tell sessions with development teams to improve their adoption of front-end best practices; and led the design, implementation, and deployment of an application ecosystem for a rising startup. We’ve also partnered with creative agencies to help them deliver quality, accessible websites that perform well under a variety of circumstances.
 
 ---
