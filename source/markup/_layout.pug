@@ -1,0 +1,13 @@
+doctype html
+html.no-js(lang='en')
+  block vars
+  head
+    include partials/document_head
+
+  body
+    block content
+
+    link(rel='stylesheet' href='/stylesheets/main.css')
+    script(src='/javascript/all.js')
+
+    block script

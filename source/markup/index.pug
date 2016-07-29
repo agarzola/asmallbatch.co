@@ -1,0 +1,12 @@
+extends _layout
+
+block vars
+  -var pageTitle = 'Home'
+
+block content
+  include:supermarked ../../OUTLINE.md
+
+block script
+  script.
+    var demo = 'This is some demo JavaScript.';
+    console.log(demo);
