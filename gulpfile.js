@@ -38,7 +38,7 @@ var imagesSrc = 'source/images/**/*.*'
 // By default, we build, serve, and watch for changes:
 gulp.task('watch', ['build', 'browser-sync'], function () {
   gulp.watch(markupSrc[0], ['markup'])
-  gulp.watch(stylesSrc[0], ['styles'])
+  gulp.watch(stylesSrc[0], ['styles', 'markup'])
   gulp.watch(jsSrc[0], ['browserify'])
   // gulp.watch(jsSrc[0], ['javascript', 'javascript_vendors'])
   gulp.watch(jsSrc[0], ['javascript_vendors'])
