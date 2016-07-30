@@ -11,6 +11,9 @@ var plumber = require('gulp-plumber')
 var browserSync = require('browser-sync')
 var gulpIf = require('gulp-if')
 var argv = require('yargs').argv
+var browserify = require('browserify')
+var source = require('vinyl-source-stream')
+var buffer = require('vinyl-buffer')
 
 // Useful globs in handy variables:
 var markupSrc = [
@@ -36,7 +39,9 @@ var imagesSrc = 'source/images/**/*.*'
 gulp.task('watch', ['build', 'browser-sync'], function () {
   gulp.watch(markupSrc[0], ['markup'])
   gulp.watch(stylesSrc[0], ['styles'])
-  gulp.watch(jsSrc[0], ['javascript', 'javascript_vendors'])
+  gulp.watch(jsSrc[0], ['browserify'])
+  // gulp.watch(jsSrc[0], ['javascript', 'javascript_vendors'])
+  gulp.watch(jsSrc[0], ['javascript_vendors'])
   gulp.watch(imagesSrc, ['images'])
 })
 
@@ -44,7 +49,8 @@ gulp.task('watch', ['build', 'browser-sync'], function () {
 gulp.task('build',
   [ 'markup',
     'styles',
-    'javascript',
+    'browserify',
+    //'javascript',
     'javascript_vendors',
     'images' ]
 )
@@ -85,6 +91,24 @@ gulp.task('javascript_vendors', function () {
   gulp.src('source/javascript/vendor/*')
   .pipe(plumber())
   .pipe(gulp.dest('build/javascript/vendor'))
+})
+
+gulp.task('browserify', function () {
+  var b = browserify({
+    entries: './source/javascript/main.js',
+    debug: true
+  })
+
+  return b.bundle()
+    .on('error', function(err) {
+      console.log('Error:', err)
+      this.emit('end')
+    })
+    .pipe(plumber())
+    .pipe(source('bundle.js'))
+    .pipe(buffer())
+    .pipe(uglify())
+    .pipe(gulp.dest('build/javascript'))
 })
 
 // Copy images to build dir:
