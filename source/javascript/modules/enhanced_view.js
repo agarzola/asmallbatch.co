@@ -18,8 +18,13 @@
   window.addEventListener('scroll', set_footer_visibility);
 
   function set_main_margin () {
-    main.style.marginTop = window.innerHeight + 'px';
-    main.style.marginBottom = window.innerHeight + 'px';
+    if (Modernizr.mq('(min-width: 850px)')) {
+      main.style.marginTop = window.innerHeight + 'px';
+      main.style.marginBottom = window.innerHeight + 'px';
+    } else {
+      main.style.marginTop = '0px';
+      main.style.marginBottom = '0px';
+    }
   }
 
   function center_content (el) {
