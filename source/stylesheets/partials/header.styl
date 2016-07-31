@@ -5,10 +5,26 @@ header
   h1
     span
       white-space nowrap
+      &:nth-of-type(0n + 1)
+        display block
+        margin 0 0.3em 0 auto
+        @media (min-width 500px)
+          text-align right
+          float left
+        @media (min-width 722px)
+          font-size em(54, 36)
+          min-width em(800 - 440, 54) - 0.35em
+      &:nth-of-type(0n + 2)
+        display block
+        max-width em(440, 36)
+        margin-left auto
+        @media (min-width 722px)
+          font-size em(54, 36)
   a
     display block
-    padding 0.4em 0.6em
+    padding 0.3em 0.6em 0.2em
     margin 1.6em 0
+    max-width em(310, 22)
     background-color $accent
     color $dark
     text-indent 0
@@ -16,8 +32,20 @@ header
     border-radius 1.5px
   p
     text-indent 0
-    line-height em(34, 22)
     font-size em(22)
+    line-height em(34, 22)
+    max-width em(440, 22)
+    margin-left auto
+    clear both
+    &:nth-of-type(0n + 3)
+      font-size 1em
+      max-width em(440)
+      text-indent 0
+      font-weight 700
+      color #ddd
+  hr
+    margin 4.6em 0 2.6em auto
+    border-top-color lighten($dark, 20%)
   .enhanced &
     hostile_takeover(fixed)
     z-index 1

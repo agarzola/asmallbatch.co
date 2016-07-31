@@ -4,3 +4,20 @@ main
   position relative
   z-index 2
   line-height em(29)
+  h2
+    display inline-block
+    margin 0 0.3em 0 auto
+    @media (min-width 850px)
+      font-size em(36, 18)
+      max-width em(800 - 440, 36) - 0.6em
+      margin-top 0 !important
+      text-align right
+      float left
+  p
+    max-width em(440)
+    margin-left auto
+  p
+    @media (min-width 850px)
+      padding-top 0.65em
+      & + p
+        padding-top 0
