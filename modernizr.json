@@ -1,7 +1,8 @@
 {
   "classPrefix": "supports-",
   "options": [
-    "mq"
+    "mq",
+    "html5shiv"
   ],
   "feature-detects": []
 }
