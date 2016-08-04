@@ -1,2 +1,2 @@
 require('./modules/enhanced_view');
-require('zenscroll');
+require('./modules/scrolling');
