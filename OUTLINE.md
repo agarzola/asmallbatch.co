@@ -17,6 +17,13 @@ We bring experience and expertise to the table, and we’ve found they are most 
 
 We’ve consulted with in-house design teams to improve their interface design; conducted show-and-tell sessions with development teams to improve their adoption of front-end best practices; and led the design, implementation, and deployment of an application ecosystem for a rising startup. We’ve also partnered with creative agencies to help them deliver quality, accessible websites that perform well under a variety of circumstances. Each one of those successes is in no small part due to the nature of our relationship with our clients.
 
+---
+
+## We team up with fantastic people
+See what our past and current clients have to say about working with us.
+
+[testimonials here]
+
 ## Tell us about your project.
 We think there’s a damn good chance we can work together. Please email us at [hello@asmallbatch.co](mailto:hello@asmallbatch.co?subject=Let’s%20build%20something%20together&body=1.%20What%20problems%20are%20you%20trying%20to%20solve?%0A%0A2.%20Is%20this%20a%20new%20challenge,%20or%20has%20your%20organization%20been%20struggling%20with%20it%20for%20some%20time?%0A%0A3.%20How%20would%20you%20describe%20the%20ideal%20outcome%20to%20this%20project?), and answer these questions as best as you can:
 
