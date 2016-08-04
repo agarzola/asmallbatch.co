@@ -1,5 +1,5 @@
 (function enhanced_view () {
-  if (!window.scrollY) { return; }
+  if (window.scrollY === undefined) { return; }
   var header = document.getElementById('header');
   var main = document.getElementById('main');
   var footer = document.getElementById('footer');
