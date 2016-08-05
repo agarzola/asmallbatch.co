@@ -52,7 +52,7 @@ function process_form (req, res) {
     res.end()
 
     var decoded_body = qs.parse(body)
-    // send_to_slack(decoded_body)
+    post_on_slack(decoded_body)
   })
 }
 
@@ -82,7 +82,7 @@ function serve_error (req, res, code, message) {
   return res.end(message)
 }
 
-function send_to_slack (body) {
+function post_on_slack (body) {
   var webhook = url.parse(process.env.SLACK_WEBHOOK_URL)
 
   var data = JSON.stringify({
