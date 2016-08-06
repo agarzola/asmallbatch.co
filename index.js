@@ -77,7 +77,7 @@ function serve_assets(req, res) {
 }
 
 function serve_microsite (req, res, locals) {
-  var render = pug.compileFile('source/markup/index.pug', { pretty: false })
+  var render = pug.compileFile('assets/markup/index.pug', { pretty: false })
   var html = render(locals)
 
   res.writeHead(200, 'OK', {
