@@ -20,6 +20,7 @@
     "pug": "^2.0.0-beta4"
   },
   "devDependencies": {
+    "autoprefixer-stylus": "^0.9.4",
     "browser-sync": "^2.13.0",
     "browserify": "^13.1.0",
     "flightplan": "^0.6.14",
@@ -36,12 +37,15 @@
     "jstransformer-markdown-it": "^0.2.3",
     "jstransformer-stylus": "^1.0.0",
     "jstransformer-supermarked": "^0.1.0",
+    "minifyify": "^7.3.3",
     "mocha": "^2.5.3",
     "modernizr": "^3.3.1",
-    "nib": "^1.0.3",
+    "parallelshell": "^2.0.0",
     "should": "^9.0.2",
+    "stylus": "^0.54.5",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
+    "watch": "^0.19.1",
     "yargs": "^4.7.1",
     "zenscroll": "^3.1.0"
   },
