@@ -19,6 +19,7 @@
     "watch:css": "npm run build:css -- --watch",
     "watch:modernizr": "./node_modules/.bin/watch 'npm run build:modernizr' modernizr.json",
     "browser-sync": "./node_modules/.bin/browser-sync start --config bs-config.js",
+    "certs": "openssl req -x509 -newkey rsa:2048 -keyout certs/key.pem -out certs/cert.pem -days 9999 -nodes",
     "deploy": "./node_modules/.bin/fly hosting"
   },
   "contributors": [
