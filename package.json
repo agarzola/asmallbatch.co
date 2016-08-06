@@ -11,16 +11,16 @@
     "build:js": "./node_modules/.bin/browserify ./source/javascript/main.js -d -p [./node_modules/minifyify/lib/index.js --map ./assets/javascript/bundle.js.map --output ./assets/javascript/bundle.js.map] > assets/javascript/bundle.js",
     "build:js_vendor": "cp ./source/javascript/vendor/* assets/javascript/vendor/",
     "build:css": "./node_modules/.bin/stylus --compress --use ./node_modules/autoprefixer-stylus/index.js source/stylesheets/non_critical.styl -o assets/stylesheets/non_critical.css",
-    "build:modernizr": "./node_modules/modernizr/bin/modernizr -u -c modernizr.json -d source/javascript/vendor/",
+    "build:modernizr": "./node_modules/modernizr/bin/modernizr -u -c dev/modernizr.json -d source/javascript/vendor/",
     "build:implode": "rm -rf ./assets && mkdir -p assets/images assets/javascript assets/javascript/vendor assets/stylesheets",
     "watch": "./node_modules/.bin/parallelshell 'node index.js' 'npm run watch:css' 'npm run watch:js' 'npm run watch:img' 'npm run build:modernizr' 'npm run browser-sync'",
     "watch:img": "./node_modules/.bin/watch 'npm run build:img' source/images",
     "watch:js": "./node_modules/.bin/watch 'npm run build:js' source/javascript",
     "watch:css": "npm run build:css -- --watch",
     "watch:modernizr": "./node_modules/.bin/watch 'npm run build:modernizr' modernizr.json",
-    "browser-sync": "./node_modules/.bin/browser-sync start --config bs-config.js",
+    "browser-sync": "./node_modules/.bin/browser-sync start --config dev/bs-config.js",
     "certs": "openssl req -x509 -newkey rsa:2048 -keyout certs/key.pem -out certs/cert.pem -days 9999 -nodes",
-    "deploy": "./node_modules/.bin/fly hosting"
+    "deploy": "./node_modules/.bin/fly hosting --flightplan dev/flightplan.js"
   },
   "contributors": [
     "Alfonso Gómez-Arzola <alfonso@asmallbatch.co>",
