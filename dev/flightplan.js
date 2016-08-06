@@ -35,11 +35,8 @@ plan.local(function(local) {
   }
 
   // uncomment these if you need to run a build on your machine first
-  local.log('Clean up build directory');
-  local.exec('npm run implode');
-
-  local.log('Run build');
-  local.exec('npm run modernizr && npm run build -- --production');
+  local.log('Clean up and build assets');
+  local.exec('npm run build');
 
   local.log('Copy files to remote hosts');
 
