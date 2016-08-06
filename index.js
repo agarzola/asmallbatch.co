@@ -11,8 +11,8 @@ var certs = {
 
 var server = https.createServer(certs, route)
 
-server.listen(3000)
-console.log('Listening for form submissions on port 3000.')
+server.listen(8080)
+console.log('Listening on port 8080.')
 
 function route (req, res) {
   req.url_parts = url.parse(req.url, true)
