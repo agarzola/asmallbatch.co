@@ -3,7 +3,6 @@ var qs = require('querystring')
 var url = require('url')
 var fs = require('fs')
 var pug = require('pug')
-var render = pug.compileFile('source/markup/index.pug', { pretty: false })
 
 var certs = {
   key: fs.readFileSync('certs/key.pem'),
@@ -71,9 +70,12 @@ function serve_assets(req, res) {
 }
 
 function serve_microsite (req, res, locals) {
+  var render = pug.compileFile('source/markup/index.pug', { pretty: false })
   var html = render(locals)
 
-  res.writeHead(200, 'OK')
+  res.writeHead(200, 'OK', {
+    'Content-Type': 'text/html'
+  })
   return res.end(html)
 }
 
