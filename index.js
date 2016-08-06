@@ -56,7 +56,7 @@ function process_form (req, res) {
 }
 
 function serve_assets(req, res) {
-  var file_path = __dirname + '/build' + req.url_parts.pathname
+  var file_path = __dirname + '/assets' + req.url_parts.pathname
   fs.stat(file_path, (err, stat) => {
     if (err !== null) { return serve_error(req, res, 404, 'File not found') }
     var file_stream = fs.createReadStream(file_path)
