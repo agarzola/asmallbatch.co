@@ -1,3 +1,4 @@
+var http = require('http')
 var https = require('https')
 var qs = require('querystring')
 var url = require('url')
@@ -9,9 +10,11 @@ var certs = {
   cert: fs.readFileSync('certs/cert.pem')
 }
 
-var server = https.createServer(certs, route)
+var insecure_server = http.createServer(forward_to_secure)
+var secure_server = https.createServer(certs, route)
 
-server.listen(8080)
+insecure_server.listen(8079)
+secure_server.listen(8080)
 console.log('Listening on port 8080.')
 
 function route (req, res) {
@@ -130,4 +133,18 @@ function prettify_field_name (field) {
   var pretty = field.replace(/_/g, ' ');
   pretty = pretty[0].toUpperCase() + pretty.slice(1)
   return pretty
+}
+
+function forward_to_secure (req, res) {
+  var url_parts = url.parse(req.url, true)
+
+  var new_location = 'https://'
+  new_location += req.headers.host.replace(/\:\d{4}/, '') // remove port from request hostname
+  new_location += req.headers.host.match(/localhost/) ? ':8080' : '' // add secure port if dev
+  new_location += url_parts.pathname
+  res.writeHead(301, {
+    Location: new_location
+  })
+
+  res.end()
 }
