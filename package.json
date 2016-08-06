@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build && node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/mocha **/*.test.js",
     "build": "npm run build:implode && npm run build:img && npm run build:js && npm run build:markup && npm run build:js_vendor && npm run build:css && npm run build:modernizr",
     "build:img": "cp -R ./source/images/* ./assets/images",
     "build:js": "./node_modules/.bin/browserify ./source/javascript/main.js -d -p [./node_modules/minifyify/lib/index.js --map ./assets/javascript/bundle.js.map --output ./assets/javascript/bundle.js.map] > assets/javascript/bundle.js",
@@ -42,10 +42,11 @@
     "jstransformer-stylus": "^1.0.0",
     "jstransformer-supermarked": "^0.1.0",
     "minifyify": "^7.3.3",
-    "mocha": "^2.5.3",
+    "mocha": "^3.0.1",
     "modernizr": "^3.3.1",
     "parallelshell": "^2.0.0",
-    "should": "^9.0.2",
+    "should": "^10.0.0",
+    "sinon": "^1.17.5",
     "stylus": "^0.54.5",
     "watch": "^0.19.1",
     "zenscroll": "^3.1.0"
