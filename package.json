@@ -46,6 +46,7 @@
     "modernizr": "^3.3.1",
     "node-mocks-http": "^1.5.2",
     "parallelshell": "^2.0.0",
+    "proxyquire": "^1.7.10",
     "should": "^10.0.0",
     "sinon": "^1.17.5",
     "stylus": "^0.54.5",
