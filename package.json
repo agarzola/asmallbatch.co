@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build && node index.js",
-    "test": "./node_modules/.bin/mocha **/*.test.js",
+    "test": "./node_modules/.bin/mocha './lib/**/*.test.js'",
     "build": "npm run build:implode && npm run build:img && npm run build:js && npm run build:markup && npm run build:js_vendor && npm run build:css && npm run build:modernizr",
     "build:img": "cp -R ./source/images/* ./assets/images",
     "build:js": "./node_modules/.bin/browserify ./source/javascript/main.js -d -p [./node_modules/minifyify/lib/index.js --map ./assets/javascript/bundle.js.map --output ./assets/javascript/bundle.js.map] > assets/javascript/bundle.js",
