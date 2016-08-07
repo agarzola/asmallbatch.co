@@ -1,6 +1,8 @@
 mixin textarea (label, required)
   label(for=label) #{label}#{required ? '' : ' #[em (optional)]'}
   textarea(name=label id=label required=required)
+  if errors && errors[label]
+    label(for=label).error= errors[label]
 
 mixin radio (label, id, required)
   label(for=id) #{label}
