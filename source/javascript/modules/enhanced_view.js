@@ -12,18 +12,16 @@
     center_content(header);
   });
   window.addEventListener('resize', set_main_margin);
-  window.addEventListener('resize', function () {
-    center_content(footer);
-  });
-  window.addEventListener('scroll', set_footer_visibility);
+  // window.addEventListener('resize', function () {
+  //   center_content(footer);
+  // });
+  // window.addEventListener('scroll', set_footer_visibility);
 
   function set_main_margin () {
     if (Modernizr.mq('(min-width: 850px)')) {
       main.style.marginTop = window.innerHeight + 'px';
-      main.style.marginBottom = window.innerHeight + 'px';
     } else {
       main.style.marginTop = '0px';
-      main.style.marginBottom = '0px';
     }
   }
 
@@ -34,14 +32,14 @@
       + 'px';
   }
 
-  function set_footer_visibility () {
-    calc_scroll_position();
-    if (window.scrollY > window.innerHeight) {
-      footer.style.zIndex = 1;
-    } else {
-      footer.style.zIndex = 0;
-    }
-  }
+  // function set_footer_visibility () {
+  //   calc_scroll_position();
+  //   if (window.scrollY > window.innerHeight) {
+  //     footer.style.zIndex = 1;
+  //   } else {
+  //     footer.style.zIndex = 0;
+  //   }
+  // }
 
   function calc_scroll_position () {
     window.scrollX = window.scrollX || window.pageXOffset !== undefined ? window.pageXOffset : document.documentElement ? document.documentElement.scrollLeft : document.body.scrollLeft;
