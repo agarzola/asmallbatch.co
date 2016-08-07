@@ -1,18 +1,7 @@
 extends _layout
 
 block content
-  header#header
-    .container
-      h1 #[span Hello, we’re] #[span Small Batch.]
-      :markdown-it
-
-        We build software solutions for the web in collaboration with startups, designers, product developers, small business owners, and creative agencies.
-
-        [Let’s start something.](#tell-us-about-your-project 'Tell us about your project.')
-
-        ---
-
-        Learn more about our practice below.
+  include partials/header
 
   main#main
     .container
@@ -32,16 +21,5 @@ block content
 
         We’ve consulted with in-house design teams to improve their interface design; conducted show-and-tell sessions with development teams to improve their adoption of front-end best practices; and led the design, implementation, and deployment of an application ecosystem for a rising startup. We’ve also partnered with creative agencies to help them deliver quality, accessible websites that perform well under a variety of circumstances. Each one of those successes is in no small part due to the nature of our relationship with our clients.
   hr#tell-us-about-your-project
-  footer#footer
-    .container
-      :markdown-it
-        ## Tell us about your&nbsp;project.
-        We think there’s a damn good chance we can work together. Please email us at [hello@asmallbatch.co](mailto:hello@asmallbatch.co?subject=Let’s%20build%20something%20together), and answer these questions as best as you can:
 
-        1. What problems are you trying to solve?
-        2. Is this a new challenge, or has your organization been struggling with it for some time?
-        3. How would you describe the ideal outcome to this project?
-
-        ---
-
-        Please note that there are no wrong answers. _“I have no idea”_ or _“that’s what I need you for!”_ are perfectly reasonable —and valuable— responses to any of these questions.
+  include partials/footer
