@@ -48,8 +48,8 @@ plan.local(function(local) {
 
 // run commands on remote hosts (destinations)
 plan.remote(function(remote) {
-  remote.log('Move everything out of build directory');
-  remote.exec('mv /tmp/' + tmpDir + '/build/* /tmp/' + tmpDir + '/ && rm -rf /tmp/' + tmpDir + '/build')
+  // remote.log('Move everything out of build directory');
+  // remote.exec('mv /tmp/' + tmpDir + '/build/* /tmp/' + tmpDir + '/ && rm -rf /tmp/' + tmpDir + '/build')
 
   remote.log('Move deployment to root');
   remote.sudo('cp -Rp /tmp/' + tmpDir + ' ~', { user: username });
