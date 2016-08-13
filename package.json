@@ -6,10 +6,11 @@
   "scripts": {
     "start": "npm run build && node index.js",
     "test": "./node_modules/.bin/mocha './lib/**/*.test.js'",
-    "build": "npm run build:implode && npm run build:img && npm run build:js && npm run build:markup && npm run build:js_vendor && npm run build:css && npm run build:modernizr",
+    "prebuild": "npm run build:implode",
+    "build": "npm run build:img && npm run build:js && npm run build:modernizr && npm run build:jsvendor && npm run build:css && npm run build:markup",
     "build:img": "cp -R ./source/images/* ./assets/images",
     "build:js": "./node_modules/.bin/browserify ./source/javascript/main.js -d -p [./node_modules/minifyify/lib/index.js --map ./assets/javascript/bundle.js.map --output ./assets/javascript/bundle.js.map] > assets/javascript/bundle.js",
-    "build:js_vendor": "cp -R ./source/javascript/vendor/* assets/javascript/vendor/",
+    "build:jsvendor": "cp -R ./source/javascript/vendor/* assets/javascript/vendor/",
     "build:markup": "cp -R ./source/markup/* ./assets/markup/",
     "build:css": "./node_modules/.bin/stylus --compress --use ./node_modules/autoprefixer-stylus/index.js source/stylesheets/*.styl -o assets/stylesheets/",
     "build:modernizr": "./node_modules/modernizr/bin/modernizr -u -c dev/modernizr.json -d source/javascript/vendor/",
