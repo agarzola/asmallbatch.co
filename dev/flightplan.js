@@ -62,4 +62,9 @@ plan.remote(function(remote) {
 
   remote.log('Point to new deployment');
   remote.sudo('ln -snf ~/' + tmpDir + ' ~/smallbatch.co', { user: username });
+
+  remote.log('Install dependencies');
+  remote.exec('npm --prefix ' + tmpDir + ' install --production ' + tmpDir);
+
+  remote.sudo('restart smallbatch', { user: username });
 });
