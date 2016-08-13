@@ -1,0 +1,58 @@
+fieldset
+  border 0
+  border-top 1px solid #979797
+  margin-top 3em
+  padding 0
+
+legend
+  padding-right 0.6em
+  text-transform uppercase
+  letter-spacing 1px
+
+label
+  display block
+  margin 1.8em 0 0.6em
+  line-height 1.4em
+  small
+    font-size 0.7em
+    text-transform uppercase
+    color #C9D5DC
+  &.tighter
+    margin-top 1.6em
+
+input[type='text'],
+input[type='email'],
+textarea
+  font-size em(16)
+  line-height 1.4em
+  display block
+  width 100%
+  border 0
+  border-radius 2px
+  padding 0.6em 0.8em 0.4em
+
+textarea
+  min-height 12em
+
+input[type='radio']
+  display block
+  float left
+  margin 0.1em 0.8em 2em 0
+  visibility hidden
+  &::after
+    content ''
+    display block
+    visibility visible
+    width 1.1em
+    height 1.1em
+    padding 0
+    box-sizing border-box
+    border-radius 1em
+    border 4px solid #fff
+    background-color #fff
+    transition-property background-color, border-color
+    transition-duration 0.8s
+  &:checked::after
+    border-color $accent
+    background-color $dark
+    transition-duration 0.2s
