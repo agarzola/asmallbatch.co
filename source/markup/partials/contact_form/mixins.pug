@@ -1,7 +1,7 @@
 mixin textarea (label, required)
   label(for=label) #{label}
     if !required
-      | &nbsp;#[em (Optional)]
+      | &nbsp;#[small Optional]
   textarea(name=label id=label required=required)
   if errors && errors[label]
     label(for=label).error= errors[label]
