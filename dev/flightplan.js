@@ -35,8 +35,11 @@ plan.local(function(local) {
   }
 
   // uncomment these if you need to run a build on your machine first
-  // local.log('Clean up and build assets');
-  // local.exec('npm run build');
+  local.log('Clean up and build assets');
+  local.exec('npm run build');
+
+  local.log('Run tests');
+  local.exec('npm test');
 
   local.log('Copy files to remote hosts');
   local.with('cd ../', { silent: true }, () => {
