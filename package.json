@@ -22,6 +22,7 @@
     "watch:modernizr": "./node_modules/.bin/watch 'npm run build:modernizr' modernizr.json",
     "browser-sync": "./node_modules/.bin/browser-sync start --config dev/bs-config.js",
     "certs": "openssl req -x509 -newkey rsa:2048 -keyout certs/key.pem -out certs/cert.pem -days 9999 -nodes",
+    "predeploy": "npm run build && npm test",
     "deploy": "./node_modules/.bin/fly hosting --flightplan dev/flightplan.js"
   },
   "contributors": [
