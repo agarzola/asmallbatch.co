@@ -31,6 +31,10 @@
   ],
   "license": "UNLICENSED",
   "dependencies": {
+    "jstransformer-autoprefixer": "^1.1.0",
+    "jstransformer-markdown-it": "^0.2.3",
+    "jstransformer-stylus": "^1.0.0",
+    "jstransformer-supermarked": "^0.1.0",
     "pug": "^2.0.0-beta4"
   },
   "devDependencies": {
@@ -38,10 +42,6 @@
     "browser-sync": "^2.13.0",
     "browserify": "^13.1.0",
     "flightplan": "^0.6.14",
-    "jstransformer-autoprefixer": "^1.1.0",
-    "jstransformer-markdown-it": "^0.2.3",
-    "jstransformer-stylus": "^1.0.0",
-    "jstransformer-supermarked": "^0.1.0",
     "minifyify": "^7.3.3",
     "mocha": "^3.0.1",
     "modernizr": "^3.3.1",
