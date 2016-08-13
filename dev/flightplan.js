@@ -61,5 +61,5 @@ plan.remote(function(remote) {
   remote.sudo('ln -snf /etc/letsencrypt/live/bcbst.asmallbatch.co/cert.pem ' + tmpDir + '/certs/cert.pem', { user: username });
 
   remote.log('Point to new deployment');
-  remote.sudo('ln -snf ~/' + tmpDir + ' /var/www/html', { user: username });
+  remote.sudo('ln -snf ~/' + tmpDir + ' ~/smallbatch.co', { user: username });
 });
