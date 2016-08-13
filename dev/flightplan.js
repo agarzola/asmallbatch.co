@@ -55,6 +55,11 @@ plan.remote(function(remote) {
   remote.sudo('cp -Rp /tmp/' + tmpDir + ' ~', { user: username });
   remote.rm('-rf /tmp/' + tmpDir);
 
+  remote.log('Symlink certs');
+  remote.exec('mkdir ' + tmpDir + '/certs');
+  remote.sudo('ln -snf /etc/letsencrypt/live/bcbst.asmallbatch.co/privkey.pem ' + tmpDir + '/certs/key.pem', { user: username });
+  remote.sudo('ln -snf /etc/letsencrypt/live/bcbst.asmallbatch.co/cert.pem ' + tmpDir + '/certs/cert.pem', { user: username });
+
   remote.log('Point to new deployment');
   remote.sudo('ln -snf ~/' + tmpDir + ' /var/www/html', { user: username });
 });
