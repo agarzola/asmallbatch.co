@@ -39,10 +39,11 @@ plan.local(function(local) {
   // local.exec('npm run build');
 
   local.log('Copy files to remote hosts');
-
-  var filesToCopy = local.exec('find build -type f \\( ! -name ".DS_Store" \\)', { silent: true });
-  // rsync files to all the destination's hosts
-  local.transfer(filesToCopy, '/tmp/' + tmpDir);
+  local.with('cd ../', { silent: true }, () => {
+    var filesToCopy = local.exec('find assets index.js package.json lib -type f \\( ! -name ".DS_Store" \\) \\( ! -name "*.test.js" \\)', { silent: true });
+    // rsync files to all the destination's hosts
+    local.transfer(filesToCopy, '/tmp/' + tmpDir);
+  })
 });
 
 // run commands on remote hosts (destinations)
