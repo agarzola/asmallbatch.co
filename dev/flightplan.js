@@ -60,11 +60,11 @@ plan.remote(function(remote) {
   remote.sudo('ln -snf /etc/letsencrypt/live/bcbst.asmallbatch.co/privkey.pem ' + tmpDir + '/certs/key.pem', { user: username });
   remote.sudo('ln -snf /etc/letsencrypt/live/bcbst.asmallbatch.co/cert.pem ' + tmpDir + '/certs/cert.pem', { user: username });
 
-  remote.log('Point to new deployment');
-  remote.sudo('ln -snf ~/' + tmpDir + ' ~/smallbatch.co', { user: username });
-
   remote.log('Install dependencies');
   remote.exec('npm --prefix ' + tmpDir + ' install --production ' + tmpDir);
+
+  remote.log('Point to new deployment');
+  remote.sudo('ln -snf ~/' + tmpDir + ' ~/smallbatch.co', { user: username });
 
   remote.sudo('restart smallbatch', { user: username });
 });
