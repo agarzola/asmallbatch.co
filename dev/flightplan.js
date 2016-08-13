@@ -66,5 +66,5 @@ plan.remote(function(remote) {
   remote.log('Point to new deployment');
   remote.sudo('ln -snf ~/' + tmpDir + ' ~/smallbatch.co', { user: username });
 
-  remote.sudo('restart smallbatch', { user: username });
+  remote.sudo('sudo service smallbatch restart', { user: username });
 });
