@@ -23,7 +23,7 @@
     "watch:modernizr": "./node_modules/.bin/watch 'npm run build:modernizr' modernizr.json",
     "watch:app": "./node_modules/.bin/nodemon --config dev/nodemon.json --ext js,pug --watch lib --watch assets --watch index.js",
     "browser-sync:reload": "NODE_TLS_REJECT_UNAUTHORIZED=0 ./node_modules/.bin/browser-sync reload --url https://localhost:3000",
-    "browser-sync": "./node_modules/.bin/browser-sync --reload-debounce 1 start --config dev/bs-config.js",
+    "browser-sync": "./node_modules/.bin/browser-sync start --config dev/bs-config.js",
     "certs": "openssl req -x509 -newkey rsa:2048 -keyout certs/key.pem -out certs/cert.pem -days 9999 -nodes",
     "deploy": "./node_modules/.bin/fly hosting --flightplan dev/flightplan.js"
   },
