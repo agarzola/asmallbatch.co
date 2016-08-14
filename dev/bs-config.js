@@ -19,7 +19,7 @@ module.exports = {
             "port": 8000
         }
     },
-    "files": 'assets/**/*',
+    "files": 'assets/!(markup)/**/*',
     "watchOptions": {},
     "server": false,
     "proxy": {
