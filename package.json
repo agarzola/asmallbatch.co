@@ -18,7 +18,7 @@
     "watch": "./node_modules/.bin/parallelshell --verbose 'npm run watch:app' 'npm run watch:css' 'npm run watch:js' 'npm run watch:markup' 'npm run watch:img' 'npm run build:modernizr' 'npm run browser-sync'",
     "watch:img": "./node_modules/.bin/watch 'npm run build:img' source/images",
     "watch:js": "./node_modules/.bin/watch 'npm run build:js' source/javascript",
-    "watch:markup": "./node_modules/.bin/watch 'npm run build:markup' source/markup",
+    "watch:markup": "./node_modules/.bin/watch 'rsync -r -u source/markup assets' source/markup",
     "watch:css": "npm run build:css -- --watch",
     "watch:modernizr": "./node_modules/.bin/watch 'npm run build:modernizr' modernizr.json",
     "watch:app": "./node_modules/.bin/nodemon --config dev/nodemon.json --ext js,pug --watch lib --watch assets --watch index.js",
