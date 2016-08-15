@@ -30,11 +30,6 @@ label
       position absolute
       top 1.2em
       left 0
-  &.error
-    color #fff
-    font-weight 900
-    padding 0.5em 0.8em 0.4em
-    background-color $error
 
 input[type='text'],
 input[type='email'],
@@ -87,3 +82,14 @@ input[type='radio']
 
 button
   button()
+
+.error, .success
+  color #fff
+  font-weight 900
+  padding 0.5em 0.8em 0.4em
+
+.error
+  background-color $error
+
+.success
+  background-color $success
