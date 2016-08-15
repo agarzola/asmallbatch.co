@@ -2,9 +2,15 @@ fieldset
   legend Tell us about you
   label(for='full_name') Your full name:
   input(type='text' name='full_name' value=data.full_name required=true tabindex=tabindex)
+  if errors && errors.full_name
+    label(for='full_name').error= errors.full_name
+  - required_fields.push('full_name')
 
   label(for='email') Your email:
   input(type='email' name='email' value=data.email required=true tabindex=tabindex)
+  if errors && errors.email
+    label(for='email').error= errors.email
+  - required_fields.push('email')
 
   label(for='organization_or_project') Name of your organization or&nbsp;project:&nbsp;#[small Optional]
   input(type='text' name='organization_or_project' value=data.organization_or_project tabindex=tabindex)

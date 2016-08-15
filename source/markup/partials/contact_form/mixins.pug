@@ -8,6 +8,8 @@ mixin textarea (label, required)
     = data[label]
   if errors && errors[label]
     label(for=label).error= errors[label]
+  if required
+    - required_fields.push(label)
 
 mixin radio (label, name, required)
   label(for=`${name}-${label}`).radio

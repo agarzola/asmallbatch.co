@@ -1,8 +1,12 @@
 include mixins
+- var required_fields = []
 
 form(method='POST' action='/')#contact-form
   include message
   include contact_information
   include project_questions
   include project_timeline
+
+  if required_fields.length > 0
+    input(type='hidden' name='required_fields' value=required_fields.join(','))
   button(type='submit' tabindex=tabindex) Send my answers
