@@ -1,0 +1,19 @@
+include mixins
+- var required_fields = []
+
+form(method='POST' action='/#tell-us-about-your-project')#contact-form
+  include message
+  include contact_information
+  include project_questions
+  include project_timeline
+
+  if required_fields.length > 0
+    input(type='hidden' name='required_fields' value=required_fields.join(','))
+  button(type='submit' tabindex=tabindex) Send my answers
+
+//- script.
+  var fields = document.querySelectorAll('[required]');
+  for (var i = fields.length - 1; i >= 0; i--) {
+    fields[i].removeAttribute('required');
+    if (fields[i].type == 'email') { fields[i].type = 'text' }
+  }

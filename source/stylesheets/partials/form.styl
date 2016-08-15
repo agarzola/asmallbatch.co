@@ -1,0 +1,95 @@
+fieldset
+  border 0
+  border-top 1px solid #979797
+  padding 0
+  margin-top 1em
+  * + &
+    margin-top 3em
+
+legend
+  padding-right 0.6em
+  text-transform uppercase
+  letter-spacing 1px
+
+label
+  display block
+  margin 0
+  padding 1.8em 0 0.6em
+  line-height 1.4em
+  &:first-of-type
+    padding-top 1.2em
+  small
+    font-size 0.7em
+    text-transform uppercase
+    color #C9D5DC
+  &.radio
+    padding-top 1em
+    padding-left 1.6em
+    position relative
+    input[type='radio']
+      position absolute
+      top 1.2em
+      left 0
+
+input[type='text'],
+input[type='email'],
+textarea
+  font-size em(16)
+  line-height 1.4em
+  display block
+  width 100%
+  border 6px solid #e9e9e9
+  border-radius 2px
+  padding 0.6em 0.8em 0.4em
+  background-color #e9e9e9
+  transition-property border-color, background-color
+  transition-duration 0.2s, 0.2s
+  outline none
+  &:focus
+    border-color $accent
+    background-color #fff
+
+textarea
+  min-height 13em
+
+input[type='radio']
+  display block
+  float left
+  margin 0.1em 0.8em 2em 0
+  outline none
+  &::after
+    content ''
+    display block
+    visibility visible
+    width 1.1em
+    height 1.1em
+    padding 0
+    margin -0.1em 0 0 -0.1em
+    box-sizing border-box
+    border-radius 1em
+    border 4px solid #fff
+    background-color #fff
+    transition-property background-color, border-color
+    transition-duration 0.2s, 0.2s
+  &:focus
+    & + span
+      color lighten($accent, 20%)
+    &::after
+      border-color $accent
+  &:checked
+    &::after
+      background-color $dark
+
+button
+  button()
+
+.error, .success
+  color #fff
+  font-weight 900
+  padding 0.5em 0.8em 0.4em
+
+.error
+  background-color $error
+
+.success
+  background-color $success
