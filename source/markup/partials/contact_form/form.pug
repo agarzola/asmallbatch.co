@@ -10,3 +10,9 @@ form(method='POST' action='/')#contact-form
   if required_fields.length > 0
     input(type='hidden' name='required_fields' value=required_fields.join(','))
   button(type='submit' tabindex=tabindex) Send my answers
+
+//- script.
+  var fields = document.querySelectorAll('[required]');
+  for (var i = fields.length - 1; i >= 0; i--) {
+    fields[i].removeAttribute('required');
+  }
