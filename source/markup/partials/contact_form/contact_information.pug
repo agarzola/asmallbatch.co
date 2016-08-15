@@ -1,13 +1,12 @@
 fieldset
   legend Tell us about you
   label(for='full_name') Your full name:
-  input(type='text' name='full_name' required=true tabindex=tabindex)
+  input(type='text' name='full_name' value=data.full_name required=true tabindex=tabindex)
 
   label(for='email') Your email:
-  input(type='email' name='email' required=true tabindex=tabindex)
+  input(type='email' name='email' value=data.email required=true tabindex=tabindex)
 
   label(for='organization_or_project') Name of your organization or&nbsp;project:&nbsp;#[small Optional]
-  input(type='text' name='organization_or_project' tabindex=tabindex)
+  input(type='text' name='organization_or_project' value=data.organization_or_project tabindex=tabindex)
 
-  label(for='How did you hear about Small Batch?') How did you hear about Small&nbsp;Batch?&nbsp;#[small Optional]
-  textarea(name='How did you hear about Small Batch?' tabindex=tabindex)
+  +textarea('How did you hear about Small Batch?')

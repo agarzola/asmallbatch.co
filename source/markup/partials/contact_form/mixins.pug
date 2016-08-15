@@ -5,10 +5,11 @@ mixin textarea (label, required)
     if !required
       | &nbsp;#[small Optional]
   textarea(name=label id=label required=required tabindex=tabindex)
+    = data[label]
   if errors && errors[label]
     label(for=label).error= errors[label]
 
 mixin radio (label, name, required)
   label(for=`${name}-${label}`).tighter
-    input(type='radio' name=name id=`${name}-${label}` required=required value=label tabindex=tabindex)
+    input(type='radio' name=name id=`${name}-${label}` checked=(data[name] === label) required=required value=label tabindex=tabindex)
     | #{label}
