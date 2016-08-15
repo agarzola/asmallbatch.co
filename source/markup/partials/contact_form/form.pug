@@ -1,11 +1,8 @@
 include mixins
 
 form(method='POST' action='/')#contact-form
-  p We think there’s a damn good chance we can work together. Please fill out and submit the form below and we’ll get in touch with you within the next two business days.
   include message
   include contact_information
   include project_questions
   include project_timeline
   button(type='submit' tabindex=tabindex) Send my answers
-  hr
-  p Alternatively, feel free to answer these questions by emailing #[a(href='mailto:hello@asmallbatch.co?subject=Let’s%20start%20something.') hello@asmallbatch.co].
