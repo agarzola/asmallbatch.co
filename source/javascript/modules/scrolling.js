@@ -13,11 +13,14 @@
     }
   });
 
-  anchor_link.addEventListener('mousedown', function (event) {
+  anchor_link.addEventListener('click', function (event) {
     if (document.body.className.match(/enhanced/)) {
+      this.blur()
       event.stopImmediatePropagation();
       event.preventDefault();
-      window.zenscroll.to(footer_target);
+      window.zenscroll.to(footer_target, null, function () {
+        first_field.focus();
+      });
     }
   });
 
