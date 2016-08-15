@@ -1,8 +1,10 @@
 fieldset
   border 0
   border-top 1px solid #979797
-  margin-top 3em
   padding 0
+  margin-top 1em
+  * + &
+    margin-top 3em
 
 legend
   padding-right 0.6em
@@ -13,6 +15,8 @@ label
   display block
   margin 1.8em 0 0.6em
   line-height 1.4em
+  &:first-of-type
+    margin-top 1.2em
   small
     font-size 0.7em
     text-transform uppercase
