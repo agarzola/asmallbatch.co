@@ -71,7 +71,11 @@ input[type='radio']
     background-color #fff
     transition-property background-color, border-color
     transition-duration 0.2s, 0.2s
-  &:checked::after
-    background-color $dark
-  &:focus::after
-    border-color $accent
+  &:focus
+    & + span
+      color $accent
+    &::after
+      border-color $accent
+  &:checked
+    &::after
+      background-color $dark
