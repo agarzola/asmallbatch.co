@@ -1,4 +1,6 @@
 (function enhanced_view () {
+  if (!window.zenscroll) { return; }
+
   var header = document.getElementById('header');
   var main = document.getElementById('main');
   var footer = document.getElementById('footer');

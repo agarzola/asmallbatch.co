@@ -1,2 +1,2 @@
-require('./modules/enhanced_view');
 require('./modules/scrolling');
+require('./modules/enhanced_view');
