@@ -8,25 +8,34 @@
   var footer_target = document.getElementById('tell-us-about-your-project');
 
   anchor_link.addEventListener('focus', function (event) {
-    if (document.body.className.match(/enhanced/)) {
+    if (window.zenscroll && document.body.className.match(/enhanced/)) {
       window.zenscroll.toY(0);
     }
   });
 
-  anchor_link.addEventListener('click', function (event) {
-    if (document.body.className.match(/enhanced/)) {
-      this.blur()
-      event.stopImmediatePropagation();
-      event.preventDefault();
-      window.zenscroll.to(footer_target, null, function () {
-        first_field.focus();
-      });
+  anchor_link.addEventListener('mousedown', focus_on_form);
+  anchor_link.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter' || event.keyCode === 13) {
+      focus_on_form(event);
     }
   });
 
-  first_field.addEventListener('focus', function (event) {
-    if (document.body.className.match(/enhanced/)) {
+  function focus_on_form (event) {
+    event.stopImmediatePropagation();
+    event.preventDefault();
+
+    if (window.zenscroll) {
       window.zenscroll.to(footer_target);
+      var timeout = 1000;
+    } else {
+      var timeout = 0;
     }
-  });
+
+    setTimeout(function () { first_field.focus() }, timeout);
+  }
+  // first_field.addEventListener('focus', function (event) {
+  //   if (document.body.className.match(/enhanced/)) {
+  //     window.zenscroll.to(footer_target);
+  //   }
+  // });
 })();
