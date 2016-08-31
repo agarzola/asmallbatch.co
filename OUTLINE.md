@@ -25,7 +25,7 @@ See what our past and current clients have to say about working with us.
 [testimonials here]
 
 ## Tell us about your project.
-We think there’s a damn good chance we can work together. Please email us at [hello@asmallbatch.co](mailto:hello@asmallbatch.co?subject=Let’s%20build%20something%20together&body=1.%20What%20problems%20are%20you%20trying%20to%20solve?%0A%0A2.%20Is%20this%20a%20new%20challenge,%20or%20has%20your%20organization%20been%20struggling%20with%20it%20for%20some%20time?%0A%0A3.%20How%20would%20you%20describe%20the%20ideal%20outcome%20to%20this%20project?), and answer these questions as best as you can:
+We think there’s a damn good chance we can work together. Please email us at [hello@smallbatch.co](mailto:hello@smallbatch.co?subject=Let’s%20build%20something%20together&body=1.%20What%20problems%20are%20you%20trying%20to%20solve?%0A%0A2.%20Is%20this%20a%20new%20challenge,%20or%20has%20your%20organization%20been%20struggling%20with%20it%20for%20some%20time?%0A%0A3.%20How%20would%20you%20describe%20the%20ideal%20outcome%20to%20this%20project?), and answer these questions as best as you can:
 
 1. What problems are you trying to solve?
 2. Is this a new challenge, or has your organization been struggling with it for some time?

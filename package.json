@@ -28,8 +28,8 @@
     "deploy": "./node_modules/.bin/fly hosting --flightplan dev/flightplan.js"
   },
   "contributors": [
-    "Alfonso Gómez-Arzola <alfonso@asmallbatch.co>",
-    "Arne Heggestad <arne@asmallbatch.co>"
+    "Alfonso Gómez-Arzola <alfonso@smallbatch.co>",
+    "Arne Heggestad <arne@smallbatch.co>"
   ],
   "license": "UNLICENSED",
   "dependencies": {
