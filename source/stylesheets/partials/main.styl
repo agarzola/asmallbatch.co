@@ -13,11 +13,15 @@ main
       margin-top 0 !important
       text-align right
       float left
-  p
+  p, blockquote
     max-width em(440)
     margin-left auto
   p
     @media (min-width 850px)
       padding-top 0.65em
       & + p
+        padding-top 0
+  blockquote
+    @media (min-width 850px)
+      p
         padding-top 0

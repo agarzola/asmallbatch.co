@@ -1,0 +1,52 @@
+blockquote
+  position relative
+  padding 0.4em 0 0
+  margin 0
+  @media (min-width 850px)
+    margin 1.5em 0
+  footer
+    text-align right
+    margin-left auto
+    max-width 16em
+    @media (min-width 850px)
+      width 16em
+      position absolute
+      top 3em
+      right 106%
+  cite
+    display block
+    // font-size em(16)
+    // font-weight 600
+    font-style normal
+    text-transform uppercase
+  img
+    display block
+    margin-top 0.6em
+    margin-left auto
+    margin-right -0.1em
+    opacity 0.9
+    // filter saturate(45%)
+    // filter grayscale(90%) brightness(115%)
+    transition-property filter
+    transition-duration 0.2s
+  &::before
+    content '“'
+    font-size em(80)
+    font-weight 700
+    color lighten($dark, 85%)
+    display block
+    position absolute
+    top 0.45em
+    left -0.5em
+    z-index -1
+    @media (min-width 850px)
+      left -0.7em
+  // &:hover img
+  //   filter grayscale(0%)
+
+.defs-only
+  position absolute
+  height 0
+  width 0
+  overflow none
+  left -100%
