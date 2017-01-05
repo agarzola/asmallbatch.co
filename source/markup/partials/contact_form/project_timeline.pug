@@ -3,17 +3,17 @@ fieldset
   label When would you like to get started?
   if errors && errors['When would you like to get started?']
     label.error= errors['When would you like to get started?']
-  +radio('Immediately', 'When would you like to get started?', true)
-  +radio('In a few weeks', 'When would you like to get started?', true)
-  +radio('In a few months', 'When would you like to get started?', true)
-  +radio('I’m not sure', 'When would you like to get started?', true)
+  +radio('Immediately', 'When would you like to get started?', required_fields['When would you like to get started?'])
+  +radio('In a few weeks', 'When would you like to get started?', required_fields['When would you like to get started?'])
+  +radio('In a few months', 'When would you like to get started?', required_fields['When would you like to get started?'])
+  +radio('I’m not sure', 'When would you like to get started?', required_fields['When would you like to get started?'])
 
 
   label When do you need a solution deployed?
   if errors && errors['When do you need a solution deployed?']
     label.error= errors['When do you need a solution deployed?']
-  +radio('Less than 1 month from now', 'When do you need a solution deployed?', true)
-  +radio('1 to 3 months from now', 'When do you need a solution deployed?', true)
-  +radio('3 to 6 months from now', 'When do you need a solution deployed?', true)
-  +radio('6 to 12 months from now', 'When do you need a solution deployed?', true)
-  +radio('I’m not sure', 'When do you need a solution deployed?', true)
+  +radio('Less than 1 month from now', 'When do you need a solution deployed?', required_fields['When do you need a solution deployed?'])
+  +radio('1 to 3 months from now', 'When do you need a solution deployed?', required_fields['When do you need a solution deployed?'])
+  +radio('3 to 6 months from now', 'When do you need a solution deployed?', required_fields['When do you need a solution deployed?'])
+  +radio('6 to 12 months from now', 'When do you need a solution deployed?', required_fields['When do you need a solution deployed?'])
+  +radio('I’m not sure', 'When do you need a solution deployed?', required_fields['When do you need a solution deployed?'])
