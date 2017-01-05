@@ -2,7 +2,7 @@
 
 mixin textarea (label, required)
   label(for=label) #{label}
-    if !required
+    if !required_fields || !required_fields[label]
       | &nbsp;#[small Optional]
   textarea(name=label id=label required=required_fields[label] tabindex=tabindex)
     = data[label]
