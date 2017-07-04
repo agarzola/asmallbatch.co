@@ -60,8 +60,8 @@ plan.remote(function(remote) {
 
   remote.log('Symlink certs');
   remote.exec('mkdir ' + tmpDir + '/certs');
-  remote.sudo('ln -snf /etc/letsencrypt/live/smallbatch.co/privkey.pem ' + tmpDir + '/certs/key.pem', { user: username });
-  remote.sudo('ln -snf /etc/letsencrypt/live/smallbatch.co/cert.pem ' + tmpDir + '/certs/cert.pem', { user: username });
+  remote.sudo('ln -snf /etc/letsencrypt/live/smallbatch.co-0002/privkey.pem ' + tmpDir + '/certs/key.pem', { user: username });
+  remote.sudo('ln -snf /etc/letsencrypt/live/smallbatch.co-0002/cert.pem ' + tmpDir + '/certs/cert.pem', { user: username });
 
   remote.log('Install dependencies');
   remote.exec('npm --prefix ' + tmpDir + ' install --production ' + tmpDir);
